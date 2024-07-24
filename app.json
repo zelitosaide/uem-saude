@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "uem-saude",
+    "name": "UEM Saúde",
     "slug": "uem-saude",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -16,13 +16,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zelitosaide.uemsaude"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.zelitosaide.uemsaude"
     },
     "web": {
       "bundler": "metro",
@@ -30,10 +32,23 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d463133e-0f0b-4cfe-a51d-2e2afdd2fcc0"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/d463133e-0f0b-4cfe-a51d-2e2afdd2fcc0"
     }
   }
 }
