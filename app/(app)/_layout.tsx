@@ -34,7 +34,7 @@ export default function AppLayout() {
       <Tabs.Screen
         name="notifications"
         options={{
-          title: "Configurações",
+          title: "Configurações.",
           // tabBarIcon: ({ color }) => <TabBarIcon name="bell-o" color={color} />,
           tabBarIcon: ({ color }) => <TabBarIcon name="gear" color={color} />,
         }}
