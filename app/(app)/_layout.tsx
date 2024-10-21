@@ -34,9 +34,8 @@ export default function AppLayout() {
       <Tabs.Screen
         name="notifications"
         options={{
-          title: "Configurações.",
-          // tabBarIcon: ({ color }) => <TabBarIcon name="bell-o" color={color} />,
-          tabBarIcon: ({ color }) => <TabBarIcon name="gear" color={color} />,
+          title: "Terminar Sessão",
+          tabBarIcon: ({ color }) => <TabBarIcon name="sign-out" color={color} />,
         }}
       />
     </Tabs>

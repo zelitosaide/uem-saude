@@ -119,9 +119,9 @@ export default function Index() {
         Bem-vindo(a). Este aplicativo é da UEM para Vigilância de doenças respiratórias na comunidade universitária (estudantes, docentes, investigadores e CTA) e familiares desta.
       </Text>
 
-      {!completeRegistration && (
+      {!completeRegistration ? (
         <Pressable
-          style={{ ...styles.button, backgroundColor: "#FEE2E2" }}
+          style={styles.button}
           onPress={async () => {
             if (session === "zas@gmail.com" || session === "zasabdala@gmail.com") {
               setShowInputField(true);
@@ -132,8 +132,25 @@ export default function Index() {
             }
           }}
         >
-          <Text style={{ fontWeight: "600", color: "#971717", fontSize: 18, textAlign: "center" }}>
-            Preenche o formulário de registo
+          <Text style={{ fontWeight: "600", color: "white", fontSize: 16, textAlign: "center" }}>
+            Preenche o formulário de REGISTO
+          </Text>
+        </Pressable>
+      ) : (
+        <Pressable
+          style={styles.button}
+          onPress={async () => {
+            if (session === "zas@gmail.com" || session === "zasabdala@gmail.com") {
+              setShowNotification(true);
+              await new Promise(resolve => setTimeout(resolve, 1000));
+              setShowNotification(false);
+            } else {
+              Linking.openURL("https://redcap.uem.mz/surveys/?s=PK8LYW7K3E");
+            }
+          }}
+        >
+          <Text style={{ fontWeight: "600", color: "white", fontSize: 16, textAlign: "center" }}>
+            Preenche o inquérito de seguimento
           </Text>
         </Pressable>
       )}
@@ -161,29 +178,13 @@ export default function Index() {
               setShowInputField(false);
             }}
           >
-            <Text style={{ fontWeight: "600", color: "white", fontSize: 18, textAlign: "center" }}>
+            <Text style={{ fontWeight: "600", color: "white", fontSize: 16, textAlign: "center" }}>
               Registar
             </Text>
           </Pressable>
         </View>
       ): null}
-      
-      <Pressable
-        style={styles.button}
-        onPress={async () => {
-          if (session === "zas@gmail.com" || session === "zasabdala@gmail.com") {
-            setShowNotification(true);
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            setShowNotification(false);
-          } else {
-            Linking.openURL("https://redcap.uem.mz/surveys/?s=PK8LYW7K3E");
-          }
-        }}
-      >
-        <Text style={{ fontWeight: "600", color: "white", fontSize: 18, textAlign: "center" }}>
-          Preenche o inquérito de seguimento
-        </Text>
-      </Pressable>
+  
     </View>
   );
 }
@@ -194,8 +195,6 @@ const styles = StyleSheet.create({
     width: "100%",
     borderRadius: 8,
     padding: 14,
-    // backgroundColor: "#1B9A19",
-    // backgroundColor: "#1faf1d",
     backgroundColor: "#008800",
     shadowColor: "rgba(0, 0, 0, 0.2)",
     shadowOffset: {

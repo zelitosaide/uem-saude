@@ -111,7 +111,7 @@ export default function SignIn() {
                   }
                 }}
               >
-                <Text style={{ fontWeight: "600", color: "white", fontSize: 18, textAlign: "center" }}>
+                <Text style={{ fontWeight: "600", color: "white", fontSize: 16, textAlign: "center" }}>
                   Iniciar sessão
                 </Text>
               </Pressable>
@@ -123,11 +123,6 @@ export default function SignIn() {
                 </Text>
               </View>
 
-              {/* <View>
-                <Text style={{ textAlign: "center", fontSize: 14 }}>
-                  <Link style={{ color: "rgb(37 99 235)" }} href="/">Inicial</Link>
-                </Text>
-              </View> */}
             </View>
           </View>
         </View>

@@ -57,24 +57,21 @@ export default function Index() {
           padding: 16
         }}
       >
-        {/* Bem-vindo(a). Este aplicativo é da UEM para Vigilância de 
-        doenças respiratórias de seus colaboradores (estudantes, docentes, investigadores e CTA) 
-        e seus familiares. */}
         Bem-vindo(a). Este aplicativo é da UEM para Vigilância de doenças respiratórias na comunidade universitária (estudantes, docentes, investigadores e CTA) e familiares desta.
       </Text>
 
       <View style={{ flexDirection: "row", justifyContent: "space-between", width: "100%", gap: 20 }}>
         <Pressable style={styles.button} onPress={() => router.push("/sign-in")}>
-          <Text style={{ fontWeight: "600", color: "white", fontSize: 18, textAlign: "center" }}>
+          <Text style={{ fontWeight: "600", color: "white", fontSize: 16, textAlign: "center" }}>
             Iniciar sessão
           </Text>
         </Pressable>
 
-        <Pressable 
-          style={{ ...styles.button, backgroundColor: "#FEE2E2" }}
+        <Pressable
+          style={{ ...styles.button, backgroundColor: "#E2F0E2", borderColor: "#008800", borderWidth: 2 }}
           onPress={() => router.push("/sign-up")}
         >
-          <Text style={{ fontWeight: "600", color: "#971717", fontSize: 18, textAlign: "center" }}>
+          <Text style={{ fontWeight: "600", color: "#000000", fontSize: 16, textAlign: "center" }}>
             Criar conta
           </Text>
         </Pressable>
@@ -89,7 +86,6 @@ const styles = StyleSheet.create({
     marginTop: 26,
     borderRadius: 16,
     padding: 14,
-    // backgroundColor: "#1B9A19",
     backgroundColor: "#008800",
     shadowColor: "rgba(0, 0, 0, 0.2)",
     shadowOffset: {

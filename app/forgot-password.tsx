@@ -80,7 +80,7 @@ export default function SignIn() {
                   }
                 }}
               >
-                <Text style={{ fontWeight: "600", color: "white", fontSize: 18, textAlign: "center" }}>
+                <Text style={{ fontWeight: "600", color: "white", fontSize: 16, textAlign: "center" }}>
                   Redefinir a Senha
                 </Text>
               </Pressable>

@@ -7,14 +7,13 @@ export default function TabNotificationsScreen() {
   return (
     <View style={styles.container}>
       <Pressable
-        style={styles.button}
+        style={styles.button }
         onPress={() => {
-          // The `app/(app)/_layout.tsx` will redirect to the sign-in screen.
           signOut();
         }}
       >
-        <Text style={{ fontWeight: "600", color: "#971717", fontSize: 18, textAlign: "center" }}>
-          Sign Out
+        <Text style={{ fontWeight: "600", color: "#971717", fontSize: 16, textAlign: "center" }}>
+          Terminar Sessão
         </Text>
       </Pressable>
     </View>
