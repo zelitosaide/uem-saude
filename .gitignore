@@ -43,3 +43,5 @@ expo-env.d.ts
 .env
 
 /escolaberta-uem-saude.json
+*ios
+*android
