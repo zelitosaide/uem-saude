@@ -116,7 +116,12 @@ export default function Index() {
           padding: 16
         }}
       >
-        Bem-vindo(a). Este aplicativo é da UEM para Vigilância de doenças respiratórias na comunidade universitária (estudantes, docentes, investigadores e CTA) e familiares desta.
+        {/* Bem-vindo(a). Este aplicativo é da UEM para Vigilância de doenças respiratórias na comunidade universitária (estudantes, docentes, investigadores e CTA) e familiares desta. */}
+        Bem-vindo(a). Este aplicativo é da UEM para Vigilância 
+        de doenças na comunidade universitária (estudantes, docentes, 
+        investigadores e CTA) e familiares desta. A sua participação é 
+        volutária e deve ser feita depois de lidos os Termos de Serviço 
+        e Política de Privacidade (confidencialidade e consentimento).
       </Text>
 
       {!completeRegistration ? (

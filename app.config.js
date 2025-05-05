@@ -26,9 +26,6 @@ const getAppName = () => {
 };
 
 export default {
-  name: getAppName(),
-  "slug": "uem-saude",
-  "version": "1.0.1",
   "orientation": "portrait",
   "icon": "./assets/images/icon.png",
   "scheme": "myapp",
@@ -38,12 +35,15 @@ export default {
     "resizeMode": "contain",
     "backgroundColor": "#ffffff"
   },
-  "assetBundlePatterns": [
-    "**/*"
-  ],
   "ios": {
     "supportsTablet": true,
     bundleIdentifier: getUniqueIdentifier(),
+    config: {
+      usesNonExemptEncryption: false,
+    },
+    entitlements: {
+      "aps-environment": "production", // For production push notifications
+    },
   },
   "android": {
     "adaptiveIcon": {
@@ -59,7 +59,16 @@ export default {
   },
   "plugins": [
     "expo-router",
-    "expo-secure-store"
+    "expo-secure-store",
+    "expo-font"
+  ],
+
+  name: getAppName(),
+  "slug": "uem-saude",
+  "version": "1.0.1",
+  
+  "assetBundlePatterns": [
+    "**/*"
   ],
   "experiments": {
     "typedRoutes": true

@@ -35,6 +35,11 @@
       "android": {
         "serviceAccountKeyPath": "./escolaberta-uem-saude.json",
         "track": "production"
+      },
+      "ios": {
+        "appleId": "info.med@uem.mz",
+        "ascAppId": "6742538299",
+        "appleTeamId": "H3J2D3TNZK"
       }
     }
   }

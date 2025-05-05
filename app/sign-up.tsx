@@ -1,10 +1,8 @@
 import { useState } from "react";
 import {
   Alert,
-  Button,
   Dimensions, 
   Keyboard, 
-  Linking, 
   Pressable, 
   ScrollView, 
   StatusBar, 
@@ -28,9 +26,6 @@ export default function SignUp() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const { signUp } = useSession();
-
-
-
 
   const [isChecked, setIsChecked] = useState(false);
 
@@ -129,9 +124,9 @@ export default function SignUp() {
                    {" "}e{' '}
                   <Link 
                     style={{ color: 'rgb(37 99 235)', textDecorationLine: 'underline' }} 
-                    href="/terms"
-                    >
-                      Política de Privacidade
+                    href="/policy"
+                  >
+                    Política de Privacidade
                   </Link>
                   {" "}e concorda em participar desta vigilância.
                 </Text>
